@@ -118,9 +118,12 @@ class Powerschool
   get :metadata, :ws, '/metadata'
   get :areas, '/ws/schema/area'
   get :tables, '/ws/schema/table'
+  get :table_records, '/ws/schema/table/:table?projection=:projection'  
   get :table_metadata, '/ws/schema/table/:table/metadata'
   get :area_table, '/ws/schema/area/:area/table'
   get :attendance, '/ws/schema/table/attendance?projection=id,studentid,schoolid,attendance_codeid,att_date'
+    
+  get :queries, '/ws/schema/query/api'
 
 
   def start_year
